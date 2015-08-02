@@ -10,7 +10,7 @@ export default Ember.Route.extend({
         });
       },
       cancel(category) {
-        this.transitionTo('categories.show', category)
+        this.transitionTo('categories.show', category);
       }
     }
 });
