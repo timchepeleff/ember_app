@@ -1,0 +1,17 @@
+<h1>Add a Category</h1>
+{{outlet}}
+
+<div>
+  <h2>Apartment Details</h2>
+    <p>{{model.name}}</p>
+</div>
+
+<form {{action "save" model on="submit"}}>
+  <p>
+    <label>Address:
+      {{input value=model.name}}
+    </label>
+  </p>
+  <input type="submit" value="Save"/>
+</form>
+<button {{action "cancel" model on="click"}}>Cancel</button>

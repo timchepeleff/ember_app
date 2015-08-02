@@ -1,13 +1,28 @@
 class Api::V1::TasksController < ApplicationController
-  def index
-    @tasks = Task.all
+  def update
+    @task = Task.find(params[:id])
+    @task.update(task_params)
 
-    render json: @tasks
+    render json: @apartment
   end
 
-  def show
-    @task = Category.find(params[:id]).tasks
+  def create
+    @task = Task.new(task_params)
+    @task.save!
 
     render json: @task
   end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+  end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:name)
+  end
+end
+
 end
