@@ -2,14 +2,12 @@
 
 {{#each model as |category|}}
   <div>
-    <p>{{link-to category.name 'categories.show' category}}</p>
-    <p>{{link-to 'Edit' 'categories.edit' category}}</p>
-    <p></p>
+    <p>{{link-to category.name 'categories.show' category}}
+    <i>{{link-to 'Edit' 'categories.edit' category}}</i>
+    </p>
   </div>
 {{/each}}
 
 {{link-to 'Add Category' 'categories.new'}}
-
-{{link-to 'Add Task' 'categories.tasks.new' }}
 
 {{outlet}}
