@@ -1,0 +1,14 @@
+<h1>Add a Task</h1>
+{{#each validationErrors as |error|}}
+  <div class="alert alert-danger" role="alert">
+    {{error}}
+  </div>
+{{/each}}
+<div>
+  <h2>Task Details</h2>
+    <p>{{model.name}}</p>
+</div>
+
+{{partial "categories/tasks/form"}}
+
+{{outlet}}

@@ -1,19 +1,10 @@
 <h1>Add a Category</h1>
-{{outlet}}
 
 <div>
   <h2>Category Details</h2>
     <p>{{model.name}}</p>
 </div>
 
-<form {{action "save" model on="submit"}}>
-  <p>
-    <label>Name:
-      {{input value=model.name}}
-    </label>
-  </p>
-  <input type="submit" value="Save"/>
-</form>
-<button {{action "cancel" model on="click"}}>Back</button>
+{{partial "categories/form"}}
 
 {{outlet}}

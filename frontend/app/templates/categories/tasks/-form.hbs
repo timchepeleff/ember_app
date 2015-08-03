@@ -1,12 +1,5 @@
-<h1>Add a Task</h1>
-{{outlet}}
-
-<div>
-  <h2>Task Details</h2>
-    <p>{{model.name}}</p>
-</div>
-
 <form {{action "save" model on="submit"}}>
+<h2>{{errorMessage}}</h2>
   <p>
     <label>Name:
       {{input value=model.name}}
