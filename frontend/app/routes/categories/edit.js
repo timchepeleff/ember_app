@@ -6,11 +6,11 @@ export default Ember.Route.extend({
       save(category) {
         var _this = this;
         category.save().then(function(category) {
-          _this.transitionTo('categories.show', category);
+          _this.transitionTo('categories');
         });
       },
       cancel(category) {
-        this.transitionTo('categories.show', category);
+        this.transitionTo('categories');
       }
     }
 });

@@ -11,7 +11,7 @@ export default Ember.Route.extend({
     save(task) {
       var _this = this;
       task.save().then(function(task) {
-        _this.transitionTo('categories.show', task.category_id);
+        _this.transitionTo('categories.show');
       });
     },
     cancel: function() {

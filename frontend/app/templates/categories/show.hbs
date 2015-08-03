@@ -1,8 +1,8 @@
 <h1>{{model.name}}</h1>
 
-{{#each model as |task|}}
+{{#each model.tasks as |task|}}
   <div>
-    <p>{{task}}</p>
+    <p>{{task.name}}</p>
     <p></p>
   </div>
 {{/each}}

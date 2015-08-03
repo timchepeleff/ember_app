@@ -3,6 +3,7 @@
 {{#each model as |category|}}
   <div>
     <p>{{link-to category.name 'categories.show' category}}</p>
+    <p>{{link-to 'Edit' 'categories.edit' category}}</p>
     <p></p>
   </div>
 {{/each}}
