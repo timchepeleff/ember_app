@@ -10,11 +10,12 @@ Router.map(function() {
     this.route("new");
     this.route('show', { path: ':id' });
     this.route('edit', { path: ':id/edit' });
-
-    this.resource("tasks", function() {
-      this.route("new", { path: "/new" });
+    this.resource('tasks', { path: ':id/tasks' }, function() {
+      this.route('new');
     });
   });
 });
+
+
 
 export default Router;

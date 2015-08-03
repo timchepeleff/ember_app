@@ -1,8 +1,11 @@
-hi
+<h1>All Categories.</h1>
 
 {{#each model as |category|}}
-  <div class="well">
+  <div>
     <p>{{link-to category.name 'categories.show' category}}</p>
     <p></p>
   </div>
 {{/each}}
+
+{{link-to 'Add Category' 'categories.new'}}
+

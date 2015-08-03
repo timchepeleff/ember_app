@@ -1,7 +1,8 @@
 class TaskSerializer < ActiveModel::Serializer
   embed :ids
 
-  attributes :id, :name
+  attributes :id,
+      :name,
+      :category_id
 
-  belongs_to :category
 end

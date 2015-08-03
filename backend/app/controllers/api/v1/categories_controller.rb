@@ -6,17 +6,16 @@ class Api::V1::CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
-    @tasks = @category.tasks
+    @category = Category.includes(:tasks).find(params[:id])
 
-    render json: @category
+    render json: @category, include: [:tasks]
   end
 
   def update
     @category = Category.find(params[:id])
     @category.update(category_params)
 
-    render json: @apartment
+    render json: @category
   end
 
   def create

@@ -3,7 +3,7 @@ class Api::V1::TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.update(task_params)
 
-    render json: @apartment
+    render json: @task
   end
 
   def create
@@ -25,4 +25,3 @@ class Api::V1::TasksController < ApplicationController
   end
 end
 
-end
